@@ -1,0 +1,170 @@
+@media (max-width: 750px) {
+    .container {
+        flex-direction: column;
+        margin: 0 10px;
+        padding: 10px;
+        align-items: center; /* Pastikan menu dan deskripsi sejajar tengah */
+        gap: 10px; /* Mengurangi jarak antar elemen */
+    }
+
+    .menu {
+        width: 90%; /* Pastikan lebar menu sama dengan deskripsi */
+        max-height: none;
+        margin-bottom: 10px; /* Mengurangi jarak dengan deskripsi */
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .description {
+        width: 90%; /* Pastikan lebar deskripsi sama dengan menu */
+        max-width: 800px; /* Maksimal lebar */
+        height: auto;
+        padding: 15px; /* Mengurangi padding agar lebih kompak */
+        font-size: 16px;
+        overflow-y: auto;
+        text-align: justify;
+        margin-left: 0; /* Hapus margin kiri agar sejajar dengan menu */
+    }
+
+    .description-content {
+        font-size: 14px;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    figure img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .menu-item {
+        font-size: 13px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1200px) {
+    .description {
+        font-size: 20px; /* Ukuran teks lebih besar untuk laptop */
+    }
+
+    .menu-item {
+        font-size: 15px;
+    }
+
+}
+    
+    body {
+        font-family: "Times New Roman", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #787276;
+        color: white;
+    }
+    
+    .header {
+        background-color: #3E424B;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        padding: 20px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
+    .container {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        margin: 0 40px;
+        align-items: flex-start;
+        gap: 20px; /* Tambahkan jarak antara menu dan deskripsi */
+    }
+    
+    .menu {
+        width: 200px;
+        background-color: #3E424B;
+        padding: 10px;
+        border-radius: 8px;
+        max-height: 750px;
+        margin-right: 20px; /* Tambahkan jarak dari deskripsi */
+    }
+    
+    .menu-item {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #222021;
+        background-color: #808588;
+        cursor: pointer;
+        text-align: left;
+        color:#ffffff;
+    }
+    
+    .menu-item:hover {
+        background-color: #0F1A2B;
+    }
+    
+    .description {
+        position: relative;
+        flex: 1;
+        padding: 20px;
+        border: 2px solid #787276;
+        height: calc(90vh - 80px);
+        border-radius: 8px;
+        text-align: justify;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        max-height: 800px;
+        margin-left: 20px;
+        overflow: hidden;
+    }
+    
+    /* Overlay transparan 70% */
+    .description::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7); /* 70% gelap */
+        border-radius: 8px;
+        z-index: 1;
+    }
+    
+    /* Pastikan teks tetap di atas overlay */
+    .description-content {
+        position: relative;
+        z-index: 2;
+    }
+    
+    
+    .description-content {
+        position: relative;
+        z-index: 2;
+        overflow-y: auto;
+        max-height: 100%;
+        padding-right: 10px;
+    }
+    
+    figure {
+        text-align: center;
+        margin: 20px 0;
+    }
+    
+    figure img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 8px;
+    }
+    
+    figcaption {
+        font-size: 14px;
+        color: #ddd;
+        margin-top: 5px;
+        font-style: italic;
+    }

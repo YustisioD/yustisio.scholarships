@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yustisio's Scholarships Experience</title>
+    <style>
+       @media (max-width: 750px) {
+    .container {
+        flex-direction: column;
+        margin: 0 10px;
+        padding: 10px;
+        align-items: center; /* Pastikan menu dan deskripsi sejajar tengah */
+        gap: 10px; /* Mengurangi jarak antar elemen */
+    }
+
+    .menu {
+        width: 90%; /* Pastikan lebar menu sama dengan deskripsi */
+        max-height: none;
+        margin-bottom: 10px; /* Mengurangi jarak dengan deskripsi */
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .description {
+        width: 90%; /* Pastikan lebar deskripsi sama dengan menu */
+        max-width: 800px; /* Maksimal lebar */
+        height: auto;
+        padding: 15px; /* Mengurangi padding agar lebih kompak */
+        font-size: 16px;
+        overflow-y: auto;
+        text-align: justify;
+        margin-left: 0; /* Hapus margin kiri agar sejajar dengan menu */
+    }
+
+    .description-content {
+        font-size: 14px;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    figure img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .menu-item {
+        font-size: 13px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1200px) {
+    .description {
+        font-size: 20px; /* Ukuran teks lebih besar untuk laptop */
+    }
+
+    .menu-item {
+        font-size: 15px;
+    }
+
+}
+    
+    body {
+        font-family: "Times New Roman", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #787276;
+        color: white;
+    }
+    
+    .header {
+        background-color: #3E424B;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        padding: 20px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
+    .container {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        margin: 0 40px;
+        align-items: flex-start;
+        gap: 20px; /* Tambahkan jarak antara menu dan deskripsi */
+    }
+    
+    .menu {
+        width: 200px;
+        background-color: #3E424B;
+        padding: 10px;
+        border-radius: 8px;
+        max-height: 750px;
+        margin-right: 20px; /* Tambahkan jarak dari deskripsi */
+    }
+    
+    .menu-item {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #222021;
+        background-color: #808588;
+        cursor: pointer;
+        text-align: left;
+        color:#ffffff;
+    }
+    
+    .menu-item:hover {
+        background-color: #0F1A2B;
+    }
+    
+    .description {
+        position: relative;
+        flex: 1;
+        padding: 20px;
+        border: 2px solid #787276;
+        height: calc(90vh - 80px);
+        border-radius: 8px;
+        text-align: justify;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        max-height: 800px;
+        margin-left: 20px;
+        overflow: hidden;
+    }
+    
+    /* Overlay transparan 70% */
+    .description::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7); /* 70% gelap */
+        border-radius: 8px;
+        z-index: 1;
+    }
+    
+    /* Pastikan teks tetap di atas overlay */
+    .description-content {
+        position: relative;
+        z-index: 2;
+    }
+    
+    
+    .description-content {
+        position: relative;
+        z-index: 2;
+        overflow-y: auto;
+        max-height: 100%;
+        padding-right: 10px;
+    }
+    
+    figure {
+        text-align: center;
+        margin: 20px 0;
+    }
+    
+    figure img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 8px;
+    }
+    
+    figcaption {
+        font-size: 14px;
+        color: #ddd;
+        margin-top: 5px;
+        font-style: italic;
+    }
+    </style>
+</head>
+<body>
+    <div class="header">
+        Yustisio's Scholarshis Experience
+    </div>
+
+    <div class="container">
+        <div class="menu">
+            <button class="menu-item" onclick="showDescription('HAGIS')">HAGI Scholarship 2024</button>
+            <button class="menu-item" onclick="showDescription('ENERGY')">Energy Scholarship Program 2023</button>
+        </div>
+
+        <div class="description" id="description">
+            <div class="description-content">
+                <p>Click on a menu item to view the description here.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const descriptions = {
+            'HAGIS': {
+                text: [
+                    '<p>I had the opportunity to be one of the 8 recipients of the HAGI Scholarship 2024. The HAGI Scholarship is a financial aid program organized by the Indonesian Association of Geophysicists (Himpunan Ahli Geofisika Indonesia). This scholarship is very valuable to me as it supports my development during my time at university. I am also very grateful to the organizers for giving me the opportunity to be a recipient of this scholarship.</p>'
+                ],
+                images: [
+                    {src:'schol2.heic',caption:'Penerima HAGI Scholarship 2024'}
+                ],
+                background: 'upnvy.png',
+                link:'https://www.instagram.com/p/DAioQRUPjBp/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
+            },
+            'ENERGY': {
+                text: [
+                    '<p>I had the opportunity to be one of the 10 recipients of the Energy Scholarship. The Energy Scholarship is a financial aid program organized by alumni of the Geophysical Engineering program at UPNVY, Class of 2013. This scholarship is very valuable to me as it supports my development during my time at university. I am also very grateful to the organizers for giving me the opportunity to receive this scholarship.</p>'
+                ],
+                images: [
+                    { src: 'schol2.png', caption: 'Penerimaan Energy Scholarship'},
+                ],
+                background: 'upnvy.png',
+                link: 'https://www.instagram.com/energy.scholarship?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='
+            },
+        };
+
+        function showDescription(org) {
+        const data = descriptions[org];
+        if (!data) return;
+
+        const descriptionElement = document.getElementById('description');
+        descriptionElement.style.backgroundImage = `url(${data.background})`;
+
+        let contentHTML = '<div class="description-content">';
+
+        // Menampilkan semua teks terlebih dahulu
+        if (data.text && data.text.length > 0) {
+            data.text.forEach((paragraph) => {
+                contentHTML += paragraph;
+            });
+        } else {
+            contentHTML += '<p>No description available.</p>';
+        }
+
+        // Menampilkan semua gambar setelah teks
+        if (data.images && data.images.length > 0) {
+            data.images.forEach((image) => {
+                contentHTML += `
+                    <figure>
+                        <img src="${image.src}" alt="${image.caption}">
+                        <figcaption>${image.caption}</figcaption>
+                    </figure>
+                `;
+            });
+        }
+
+        // Menambahkan tombol "Go to Link" jika ada link
+        if (data.link) {
+            contentHTML += `
+                <div style="text-align: center; margin-top: 20px;">
+                    <a href="${data.link}" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #F77F00; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
+                        Go to Link
+                    </a>
+                </div>
+            `;
+        }
+
+        contentHTML += '</div>';
+        descriptionElement.innerHTML = contentHTML;
+    }
+
+    </script>
+</body>
+</html>
